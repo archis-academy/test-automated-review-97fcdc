@@ -6,7 +6,7 @@ body {
 
 .hero {
   min-height: 100svh;
-  padding: 28px clamp(24px, 5vw, 76px) 36px;
+  padding: 22px 20px 28px;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -15,17 +15,17 @@ body {
 .hero::before {
   background: var(--terracotta);
   content: "";
-  height: 340px;
+  height: 230px;
   position: absolute;
-  right: -90px;
-  top: -110px;
+  right: -110px;
+  top: -135px;
   transform: rotate(18deg);
-  width: 270px;
+  width: 220px;
   z-index: -1;
 }
 
 .site-header {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -45,17 +45,17 @@ body {
 .site-nav ul {
   align-items: center;
   display: flex;
-  gap: clamp(18px, 3vw, 48px);
+  gap: 11px;
   white-space: nowrap;
 }
 
 .site-nav a {
   color: var(--ink);
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: 0.66rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  padding: 8px 2px;
+  padding: 7px 0;
   transition: color 160ms ease-out;
 }
 
@@ -72,16 +72,17 @@ body {
 
 .hero-content {
   align-items: center;
-  display: grid;
-  gap: clamp(44px, 8vw, 132px);
-  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
   margin: 0 auto;
   max-width: 1288px;
-  min-height: calc(100svh - 102px);
-  padding: 44px 0 24px;
+  min-height: auto;
+  padding: 85px 0 0;
 }
 
 .hero-copy {
+  align-self: flex-start;
   max-width: 500px;
 }
 
@@ -97,7 +98,7 @@ body {
 h1 {
   color: var(--espresso);
   font-family: var(--display-font);
-  font-size: clamp(3.6rem, 6.8vw, 7.2rem);
+  font-size: clamp(3.5rem, 17vw, 5rem);
   font-weight: 500;
   letter-spacing: -0.075em;
   line-height: 0.91;
@@ -108,7 +109,7 @@ h1 {
   color: var(--muted-ink);
   font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   line-height: 1.65;
-  margin: 32px 0 38px;
+  margin: 25px 0 30px;
   max-width: 390px;
 }
 
@@ -141,10 +142,11 @@ h1 {
 }
 
 .hero-image {
-  height: min(68vh, 635px);
+  height: 54vw;
   margin: 0;
-  min-height: 470px;
+  min-height: 230px;
   position: relative;
+  width: 100%;
 }
 
 .hero-image::after {
@@ -173,65 +175,60 @@ h1 {
   z-index: 1;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .hero {
-    padding: 22px 20px 28px;
+    padding: 28px clamp(24px, 5vw, 76px) 36px;
   }
 
   .hero::before {
-    height: 230px;
-    right: -110px;
-    top: -135px;
-    width: 220px;
+    height: 340px;
+    right: -90px;
+    top: -110px;
+    width: 270px;
   }
 
   .site-header {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .site-nav ul {
-    gap: 11px;
+    gap: clamp(18px, 3vw, 48px);
   }
 
   .site-nav a {
-    font-size: 0.66rem;
-    padding: 7px 0;
+    font-size: 0.78rem;
+    padding: 8px 2px;
   }
 
   .hero-content {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
-    min-height: auto;
-    padding-top: 85px;
-  }
-
-  .hero-copy {
-    align-self: flex-start;
-  }
-
-  h1 {
-    font-size: clamp(3.5rem, 17vw, 5rem);
-  }
-
-  .hero-intro {
-    margin: 25px 0 30px;
-  }
-
-  .hero-image {
-    height: 54vw;
-    min-height: 230px;
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1100px) {
-  .hero-content {
+    display: grid;
     gap: 48px;
     grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1fr);
+    min-height: calc(100svh - 102px);
+    padding: 44px 0 24px;
   }
 
   h1 {
     font-size: clamp(3.7rem, 7vw, 5.6rem);
+  }
+
+  .hero-intro {
+    margin: 32px 0 38px;
+  }
+
+  .hero-image {
+    height: min(68vh, 635px);
+    min-height: 470px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero-content {
+    gap: clamp(44px, 8vw, 132px);
+    grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1fr);
+  }
+
+  h1 {
+    font-size: clamp(3.6rem, 6.8vw, 7.2rem);
   }
 }
