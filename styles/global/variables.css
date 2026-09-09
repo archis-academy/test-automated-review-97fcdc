@@ -1,9 +1,13 @@
 :root {
-  /* COLORS */
+  --ink: #25231f;
+  --muted-ink: #716b62;
+  --espresso: #45362b;
+  --terracotta: #bd5d40;
+  --cream: #f4f0e8;
+  --pure-white: #fffdf9;
 
-  /* FONT SIZES */
-
-  /* FONT WEIGHTS */
+  --display-font: "Playfair Display", Georgia, serif;
+  --body-font: "DM Sans", Arial, sans-serif;
 
   /* Breakpoints */
   --breakpoint-sm: 576px;

@@ -1,0 +1,237 @@
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--body-font);
+}
+
+.hero {
+  min-height: 100svh;
+  padding: 28px clamp(24px, 5vw, 76px) 36px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero::before {
+  background: var(--terracotta);
+  content: "";
+  height: 340px;
+  position: absolute;
+  right: -90px;
+  top: -110px;
+  transform: rotate(18deg);
+  width: 270px;
+  z-index: -1;
+}
+
+.site-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1288px;
+  position: relative;
+  z-index: 1;
+}
+
+.wordmark {
+  color: var(--espresso);
+  font-family: var(--display-font);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+}
+
+.site-nav ul {
+  align-items: center;
+  display: flex;
+  gap: clamp(18px, 3vw, 48px);
+  white-space: nowrap;
+}
+
+.site-nav a {
+  color: var(--ink);
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 8px 2px;
+  transition: color 160ms ease-out;
+}
+
+.site-nav a:hover {
+  color: var(--terracotta);
+}
+
+.site-nav a:focus-visible,
+.wordmark:focus-visible,
+.hero-cta:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 5px;
+}
+
+.hero-content {
+  align-items: center;
+  display: grid;
+  gap: clamp(44px, 8vw, 132px);
+  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1fr);
+  margin: 0 auto;
+  max-width: 1288px;
+  min-height: calc(100svh - 102px);
+  padding: 44px 0 24px;
+}
+
+.hero-copy {
+  max-width: 500px;
+}
+
+.eyebrow {
+  color: var(--terracotta);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: var(--espresso);
+  font-family: var(--display-font);
+  font-size: clamp(3.6rem, 6.8vw, 7.2rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.91;
+  max-width: 630px;
+}
+
+.hero-intro {
+  color: var(--muted-ink);
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.65;
+  margin: 32px 0 38px;
+  max-width: 390px;
+}
+
+.hero-cta {
+  align-items: center;
+  background: var(--espresso);
+  color: var(--pure-white);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  gap: 24px;
+  justify-content: space-between;
+  letter-spacing: 0.02em;
+  min-width: 190px;
+  padding: 17px 18px 17px 22px;
+  transition: background-color 160ms ease-out, transform 160ms ease-out;
+}
+
+.hero-cta:hover {
+  background: var(--terracotta);
+}
+
+.hero-cta:active {
+  transform: scale(0.98);
+}
+
+.hero-cta-arrow {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.hero-image {
+  height: min(68vh, 635px);
+  margin: 0;
+  min-height: 470px;
+  position: relative;
+}
+
+.hero-image::after {
+  border: 1px solid rgba(255, 253, 249, 0.5);
+  content: "";
+  inset: 16px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.hero-image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.hero-image figcaption {
+  bottom: 24px;
+  color: var(--pure-white);
+  font-size: 0.62rem;
+  left: 28px;
+  letter-spacing: 0.15em;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 22px 20px 28px;
+  }
+
+  .hero::before {
+    height: 230px;
+    right: -110px;
+    top: -135px;
+    width: 220px;
+  }
+
+  .site-header {
+    align-items: flex-start;
+  }
+
+  .site-nav ul {
+    gap: 11px;
+  }
+
+  .site-nav a {
+    font-size: 0.66rem;
+    padding: 7px 0;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    min-height: auto;
+    padding-top: 85px;
+  }
+
+  .hero-copy {
+    align-self: flex-start;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 17vw, 5rem);
+  }
+
+  .hero-intro {
+    margin: 25px 0 30px;
+  }
+
+  .hero-image {
+    height: 54vw;
+    min-height: 230px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .hero-content {
+    gap: 48px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1fr);
+  }
+
+  h1 {
+    font-size: clamp(3.7rem, 7vw, 5.6rem);
+  }
+}
