@@ -2,8 +2,8 @@
 @import url("/styles/global/variables.css");
 
 body {
-  background: var(--canvas-white, Canvas);
-  color: var(--pure-black, CanvasText);
+  background: var(--canvas-white);
+  color: var(--pure-black);
   font-family: Arial, sans-serif;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 .hero::before {
-  background: var(--soft-ivory, Canvas);
+  background: var(--soft-ivory);
   content: "";
   height: 230px;
   position: absolute;
@@ -38,7 +38,7 @@ body {
 }
 
 .wordmark {
-  color: var(--pure-black, CanvasText);
+  color: var(--pure-black);
   font-family: Georgia, serif;
   font-size: clamp(1.35rem, 2.2vw, 1.85rem);
   font-weight: 600;
@@ -53,7 +53,7 @@ body {
 }
 
 .site-nav a {
-  color: var(--pure-black, CanvasText);
+  color: var(--pure-black);
   display: inline-block;
   font-size: 0.66rem;
   font-weight: 500;
@@ -63,13 +63,13 @@ body {
 }
 
 .site-nav a:hover {
-  color: var(--pure-black, CanvasText);
+  color: var(--pure-black);
 }
 
 .site-nav a:focus-visible,
 .wordmark:focus-visible,
 .hero-cta:focus-visible {
-  outline: 3px solid var(--pure-black, CanvasText);
+  outline: 3px solid var(--pure-black);
   outline-offset: 5px;
 }
 
@@ -90,7 +90,7 @@ body {
 }
 
 .eyebrow {
-  color: var(--pure-black, CanvasText);
+  color: var(--pure-black);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -99,7 +99,7 @@ body {
 }
 
 h1 {
-  color: var(--pure-black, CanvasText);
+  color: var(--pure-black);
   font-family: Georgia, serif;
   font-size: clamp(3.5rem, 17vw, 5rem);
   font-weight: 500;
@@ -109,7 +109,7 @@ h1 {
 }
 
 .hero-intro {
-  color: var(--pure-black, CanvasText);
+  color: var(--pure-black);
   font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   line-height: 1.65;
   margin: 25px 0 30px;
@@ -118,8 +118,8 @@ h1 {
 
 .hero-cta {
   align-items: center;
-  background: var(--pure-black, CanvasText);
-  color: var(--canvas-white, Canvas);
+  background: var(--pure-black);
+  color: var(--canvas-white);
   display: inline-flex;
   font-size: 0.78rem;
   font-weight: 700;
@@ -132,8 +132,8 @@ h1 {
 }
 
 .hero-cta:hover {
-  background: var(--soft-ivory, Canvas);
-  color: var(--pure-black, CanvasText);
+  background: var(--soft-ivory);
+  color: var(--pure-black);
 }
 
 .hero-cta:active {
@@ -154,7 +154,7 @@ h1 {
 }
 
 .hero-image::after {
-  border: 1px solid var(--soft-ivory, Canvas);
+  border: 1px solid var(--soft-ivory);
   content: "";
   inset: 16px;
   opacity: 0.5;
@@ -171,7 +171,7 @@ h1 {
 
 .hero-image figcaption {
   bottom: 24px;
-  color: var(--canvas-white, Canvas);
+  color: var(--canvas-white);
   font-size: 0.62rem;
   left: 28px;
   letter-spacing: 0.15em;
