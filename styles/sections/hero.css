@@ -1,7 +1,7 @@
 body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--body-font);
+  background: var(--canvas-white, Canvas);
+  color: var(--pure-black, CanvasText);
+  font-family: Arial, sans-serif;
 }
 
 .hero {
@@ -13,7 +13,7 @@ body {
 }
 
 .hero::before {
-  background: var(--terracotta);
+  background: var(--soft-ivory, Canvas);
   content: "";
   height: 230px;
   position: absolute;
@@ -35,8 +35,8 @@ body {
 }
 
 .wordmark {
-  color: var(--espresso);
-  font-family: var(--display-font);
+  color: var(--pure-black, CanvasText);
+  font-family: Georgia, serif;
   font-size: clamp(1.35rem, 2.2vw, 1.85rem);
   font-weight: 600;
   letter-spacing: -0.045em;
@@ -50,7 +50,7 @@ body {
 }
 
 .site-nav a {
-  color: var(--ink);
+  color: var(--pure-black, CanvasText);
   display: inline-block;
   font-size: 0.66rem;
   font-weight: 500;
@@ -60,13 +60,13 @@ body {
 }
 
 .site-nav a:hover {
-  color: var(--terracotta);
+  color: var(--pure-black, CanvasText);
 }
 
 .site-nav a:focus-visible,
 .wordmark:focus-visible,
 .hero-cta:focus-visible {
-  outline: 3px solid var(--terracotta);
+  outline: 3px solid var(--pure-black, CanvasText);
   outline-offset: 5px;
 }
 
@@ -87,7 +87,7 @@ body {
 }
 
 .eyebrow {
-  color: var(--terracotta);
+  color: var(--pure-black, CanvasText);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -96,8 +96,8 @@ body {
 }
 
 h1 {
-  color: var(--espresso);
-  font-family: var(--display-font);
+  color: var(--pure-black, CanvasText);
+  font-family: Georgia, serif;
   font-size: clamp(3.5rem, 17vw, 5rem);
   font-weight: 500;
   letter-spacing: -0.075em;
@@ -106,7 +106,7 @@ h1 {
 }
 
 .hero-intro {
-  color: var(--muted-ink);
+  color: var(--pure-black, CanvasText);
   font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   line-height: 1.65;
   margin: 25px 0 30px;
@@ -115,8 +115,8 @@ h1 {
 
 .hero-cta {
   align-items: center;
-  background: var(--espresso);
-  color: var(--pure-white);
+  background: var(--pure-black, CanvasText);
+  color: var(--canvas-white, Canvas);
   display: inline-flex;
   font-size: 0.78rem;
   font-weight: 700;
@@ -129,7 +129,7 @@ h1 {
 }
 
 .hero-cta:hover {
-  background: var(--terracotta);
+  background: var(--soft-ivory, Canvas);
 }
 
 .hero-cta:active {
@@ -166,7 +166,7 @@ h1 {
 
 .hero-image figcaption {
   bottom: 24px;
-  color: var(--pure-white);
+  color: var(--canvas-white, Canvas);
   font-size: 0.62rem;
   left: 28px;
   letter-spacing: 0.15em;
