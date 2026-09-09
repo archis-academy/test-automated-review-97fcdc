@@ -1,9 +1,7 @@
 :root {
-  /* COLORS */
-
-  /* FONT SIZES */
-
-  /* FONT WEIGHTS */
+  --canvas-white: Canvas;
+  --pure-black: CanvasText;
+  --soft-ivory: Canvas;
 
   /* Breakpoints */
   --breakpoint-sm: 576px;

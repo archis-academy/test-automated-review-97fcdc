@@ -3,33 +3,59 @@
 <html lang="en">
   <head>
     <!-- Favicon -->
-    <link rel="icon" href="./public/archis-logo.svg" />
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600&display=swap"
       rel="stylesheet"
     />
 
     <meta charset="UTF-8" />
-    <title>TrustCo</title>
-    <meta name="description" content="Welcome to Archis" />
+    <title>Kaya Coffee — Coffee, considered</title>
+    <meta
+      name="description"
+      content="Kaya Coffee makes beautifully considered coffee for slow mornings and good company."
+    />
     <link rel="stylesheet" href="./styles/index.css" type="text/css" />
   </head>
 
   <body>
-    <header class="welcome-header">
-      <img src="./public/archis-logo.svg" alt="Archis Logo" />
-      <h1>Welcome to Archis</h1>
+    <!-- SECTION: hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <header class="site-header">
+        <a class="wordmark" href="./" aria-label="Kaya Coffee home">Kaya Coffee</a>
 
-      <em>Copyright &copy; <span id="copyright-year"></span></em>
-    </header>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#beans">Beans</a></li>
+            <li><a href="#tasting-room">Tasting Room</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <script>
-      const copyRightYear = document.getElementById("copyright-year");
-      copyRightYear.innerText = new Date().getFullYear();
-    </script>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Small batch · Big feeling</p>
+          <h1 id="hero-title">Small-batch roastery and tasting room.</h1>
+          <p class="hero-intro">
+            Thoughtfully sourced beans, roasted with care, and made for the moments worth lingering over.
+          </p>
+          <a class="hero-cta" href="#beans">
+            <span>Explore our beans</span>
+            <span class="hero-cta-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <figure class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=85"
+            alt="A freshly poured latte beside a cup of roasted coffee beans on a wooden table"
+          />
+          <figcaption>Roasted in small batches, Melbourne</figcaption>
+        </figure>
+      </div>
+    </section>
   </body>
 </html>
