@@ -130,6 +130,7 @@ h1 {
 
 .hero-cta:hover {
   background: var(--soft-ivory, Canvas);
+  color: var(--pure-black, CanvasText);
 }
 
 .hero-cta:active {
