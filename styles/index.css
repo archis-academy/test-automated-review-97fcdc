@@ -208,7 +208,6 @@ h1 {
     display: grid;
     gap: 48px;
     grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1fr);
-    min-height: calc(100svh - 102px);
     padding: 44px 0 24px;
   }
 
@@ -221,8 +220,8 @@ h1 {
   }
 
   .hero-image {
-    height: min(68vh, 635px);
-    min-height: 470px;
+    height: min(60vh, 600px);
+    min-height: 420px;
   }
 }
 
